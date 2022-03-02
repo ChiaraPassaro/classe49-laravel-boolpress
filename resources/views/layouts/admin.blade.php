@@ -23,7 +23,10 @@
 
 <body>
     <div id="app">
+        {{-- header --}}
         @include('partials.header')
+
+        {{-- main --}}
         <main class="py-4">
             <div class="container-fluid">
                 <div class="row">
@@ -31,15 +34,33 @@
                         <div class="position-sticky pt-3">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">
+                                    <a class="nav-link active" aria-current="page"
+                                        href="{{ route('admin.posts.create') }}">
+                                        Add Post
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="{{ route('admin.home') }}">
                                         <i class="bi bi-house"></i>
                                         Dashboard
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">
+                                    <a class="nav-link" href="{{ route('admin.categories.index') }}">
                                         <i class="bi bi-files"></i>
-                                        Posts
+                                        All Categories
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('admin.posts.index') }}">
+                                        <i class="bi bi-files"></i>
+                                        All Posts
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('admin.posts.indexUser') }}">
+                                        <i class="bi bi-files"></i>
+                                        My Posts
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -52,7 +73,6 @@
                         </div>
                     </nav>
                     <div class="col">
-
                         @yield('content')
                     </div>
                 </div>

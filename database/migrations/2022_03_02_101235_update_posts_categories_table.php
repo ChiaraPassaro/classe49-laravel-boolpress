@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UpdatePostsTable extends Migration
+class UpdatePostsCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +14,12 @@ class UpdatePostsTable extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->unsignedBigInteger('user_id')
+            $table->unsignedBigInteger('category_id')
                 ->after('id')
                 ->nullable();
-            $table->foreign('user_id')
+            $table->foreign('category_id')
                 ->references('id')
-                ->on('users')->onDelete('set null');
+                ->on('categories')->onDelete('set null');
         });
     }
 
@@ -31,8 +31,8 @@ class UpdatePostsTable extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->dropForeign('posts_user_id_foreign');
-            $table->dropColumn('user_id');
+            $table->dropForeign('posts_category_id_foreign');
+            $table->dropColumn('category_id');
         });
     }
 }
