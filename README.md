@@ -120,3 +120,32 @@ If you wish to append all current query string values to the pagination links yo
 
 {{ $users->withQueryString()->links() }}
 ```
+
+<br>
+<hr>
+<br>
+
+# Todo Milestone 2 
+
+## Add Many to Many Relationship
+https://laravel.com/docs/7.x/eloquent-relationships#many-to-many
+
+## Important! How to create tables
+```
+Table Structure
+To define this relationship, three database tables are needed. 
+
+For example: 
+users, roles, and role_user. 
+
+The role_user table is derived from the alphabetical order of the related model names, and contains the user_id and role_id columns.
+```
+#### Attaching / Detaching / Sync - Association
+https://laravel.com/docs/7.x/eloquent-relationships#updating-many-to-many-relationships
+
+#### Touching Parent Timestamps
+https://laravel.com/docs/7.x/eloquent-relationships#touching-parent-timestamps
+
+## How to Validating Arrays 
+https://laravel.com/docs/7.x/validation#validating-arrays
+
