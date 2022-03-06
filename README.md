@@ -149,3 +149,6 @@ https://laravel.com/docs/7.x/eloquent-relationships#touching-parent-timestamps
 ## How to Validating Arrays 
 https://laravel.com/docs/7.x/validation#validating-arrays
 
+
+## File Storage
+https://laravel.com/docs/9.x/filesystem#the-public-disk
