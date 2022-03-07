@@ -23,6 +23,9 @@
             <div class="col">
                 {{ $post->content }}
             </div>
+            <div class="col">
+                <img class="img-fluid" src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}">
+            </div>
         </div>
     </div>
 @endsection

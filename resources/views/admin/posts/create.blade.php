@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="row">
-            <form action="{{ route('admin.posts.store') }}" method="post">
+            <form action="{{ route('admin.posts.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('POST')
                 <div class="mb-3">
@@ -78,6 +78,28 @@
                     @enderror
                 </div>
 
+                <div class="mb-3">
+                    <label for="title" class="form-label">Created</label>
+                    <input type="date" class="form-control" id="created_at" name="created_at"
+                        value=" {{ old('created_at') }}">
+                    @error('created_at')
+                        <div class="alert alert-danger mt-3">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
+
+                {{-- image upload --}}
+                <div class="mb-3">
+                    @dd(old('image'))
+                    <label for="image" class="form-label">Image</label>
+                    <input class="form-control" type="file" id="image" name="image">
+                    @error('image')
+                        <div class="alert alert-danger mt-3">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
                 {{-- <input type="hidden" name="user_id" id="user_id" value="{{ Auth::user()->id }}"> --}}
 
                 <input class="btn btn-primary" type="submit" value="Save">

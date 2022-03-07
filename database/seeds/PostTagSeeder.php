@@ -13,11 +13,11 @@ class PostTagSeeder extends Seeder
      */
     public function run()
     {
-        $tags = Tag::all();
+        $posts = Post::all();
         //ad ogni tag piu di un post
-        foreach ($tags as $tag) {
-            $posts = Post::inRandomOrder()->limit(6)->get();
-            $tag->posts()->attach($posts);
+        foreach ($posts as $post) {
+            $tags = Tag::inRandomOrder()->limit(3)->get();
+            $post->tags()->attach($tags);
         }
     }
 }

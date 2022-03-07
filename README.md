@@ -149,6 +149,10 @@ https://laravel.com/docs/7.x/eloquent-relationships#touching-parent-timestamps
 ## How to Validating Arrays 
 https://laravel.com/docs/7.x/validation#validating-arrays
 
+# Todo Milestone 3 
 
+## Refactoring 
+1. Move Auth check to controller
+2. Add Photo Post (File Storage)
 ## File Storage
 https://laravel.com/docs/9.x/filesystem#the-public-disk

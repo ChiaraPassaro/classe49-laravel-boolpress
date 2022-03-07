@@ -13,6 +13,7 @@ class Post extends Model
         'slug',
         'user_id',
         'category_id',
+        'image',
         'created_at',
         'updated_at',
     ];
@@ -39,7 +40,7 @@ class Post extends Model
     }
 
 
-    public function tags() 
+    public function tags()
     {
         return $this->belongsToMany('App\Model\Tag')->withTimestamps();
     }

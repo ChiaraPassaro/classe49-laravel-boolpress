@@ -18,7 +18,7 @@
                                 document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a> --}}
-
+                    <a class="nav-link" href="{{ route('admin.home') }}">Home</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST">
                         @csrf
                         <input type="submit" class="btn btn-light" value="Logout">
